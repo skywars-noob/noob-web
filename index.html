@@ -155,6 +155,21 @@
         © 2025 Noob生存伺服器 保留所有權利
     </footer>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe sections for smooth sliding in effect
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+        
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
         // Script to copy IP to clipboard
         document.getElementById('copy-ip-btn').addEventListener('click', () => {
             const ip = document.getElementById('server-ip').textContent;
