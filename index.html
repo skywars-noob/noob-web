@@ -8,6 +8,7 @@
     <meta name="description" content="超好玩的Mc生存服 - Noob生存伺服器">
     <meta property="og:image" content="/server-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <meta name="google-adsense-account" content="ca-pub-1681950087708589">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1681950087708589" crossorigin="anonymous"></script>
     <style>
@@ -51,14 +52,6 @@
             margin: 1em 0;
             width: 80%;
             max-width: 800px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .section h2 {
@@ -117,17 +110,17 @@
         Noob 生存伺服器
     </header>
     <main>
-        <section class="section">
+        <section class="section animate__animated animate__fadeInUp">
             <h2>連線方式</h2>
             <h1>IP : <code id="server-ip">mc.noobtw.top</code> <button id="copy-ip-btn">複製</button></h1>
             <h1>Port : <code>25565</code> (預設)</h1>
             <img src="https://image.mc-list.xyz/preview/1-1667.png?bannerShowIcon=1&bannerShowVersion=1" alt="狀態圖">
         </section>
-        <section class="section">
+        <section class="section animate__animated animate__fadeInUp animate__delay-1s">
             <h2>加入社群</h2>
             <h3>加入我們的 <a href="https://discord.com/invite/R4mfP56Wve" target="_blank">Discord 伺服器</a>，與其他玩家交流，獲取最新資訊和支持。</h3>
         </section>
-        <section class="section">
+        <section class="section animate__animated animate__fadeInUp animate__delay-2s">
             <h2>伺服器介紹</h2>
             <p>歡迎來到Noob生存伺服器，一個充滿挑戰和樂趣的Minecraft生存體驗天堂。<br>在這裡，我們為所有玩家提供了一個友好且具有挑戰性的遊戲環境，<br>無論你是新手還是老手，都能在這裡找到樂趣。</p>
             <h3>我們的特色</h3>
@@ -138,7 +131,7 @@
                 <li><strong>友善的社群</strong>：我們有一個友善且熱心的玩家社群，隨時準備幫助新手解答問題，分享遊戲心得。</li>
             </ul>
         </section>
-        <section class="section">
+        <section class="section animate__animated animate__fadeInUp animate__delay-3s">
             <h2>伺服器規則</h2>
             <p>為了保持一個和諧的遊戲環境，我們希望每位玩家都能遵守以下規則：</p>
             <ol>
@@ -155,21 +148,6 @@
         © 2025 Noob生存伺服器 保留所有權利
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Observe sections for smooth sliding in effect
-            const sections = document.querySelectorAll('.section');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-        
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
         // Script to copy IP to clipboard
         document.getElementById('copy-ip-btn').addEventListener('click', () => {
             const ip = document.getElementById('server-ip').textContent;
