@@ -1,4 +1,3 @@
 # Noob生存伺服器-官網
-- [官網](https://noob.serveminecraft.net/)
+- [官網](https://minecraft.noobtw.top/)
 - [Discord](https://discord.com/invite/R4mfP56Wve)
-## 還是開源好了.....
