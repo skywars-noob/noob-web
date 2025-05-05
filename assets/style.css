@@ -1,0 +1,212 @@
+:root {
+  --background-color: #181a20;
+  --section-bg: #23242b;
+  --text-color: #f3f3f3;
+  --card-border: #333;
+  --accent: #00ffe0;
+  --accent-hover: #ff00c8;
+  --table-header: #222;
+  --table-row-even: #2a2c35;
+  --table-row-odd: #23242b;
+  --link-color: #00ffe0;
+  --link-hover: #ff00c8;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--background-color);
+  color: #fff;
+  padding: 24px 0 12px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--card-border);
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, nav a.active {
+  background: var(--section-bg);
+  color: var(--link-hover);
+}
+
+.section {
+  max-width: 700px;
+  margin: 48px auto;
+  padding: 32px 20px;
+  background: var(--section-bg);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #0008;
+  animation: fadeIn 1s;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5em 0;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 2em 0 1em 0;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+.server-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.server-table th, .server-table td {
+  border: 1px solid var(--card-border);
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.server-table th {
+  background: var(--table-header);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.server-table tr:nth-child(even) {
+  background: var(--table-row-even);
+}
+
+.server-table tr:nth-child(odd) {
+  background: var(--table-row-odd);
+}
+
+.copy-btn {
+  background: var(--accent);
+  color: #181a20;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.copy-btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+.card {
+  background: var(--section-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px #0002;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: fadeInUp 0.8s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px #0004;
+  transform: translateY(-4px) scale(1.01);
+}
+
+ul, ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: none; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--section-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 16px;
+    margin: 24px auto;
+  }
+  nav {
+    gap: 12px;
+    padding: 0 12px;
+  }
+  nav a {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .server-table th, .server-table td {
+    padding: 8px 4px;
+    font-size: 0.9rem;
+  }
+}
