@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>連線教學 | Noob 生存伺服器</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="js/main.js"></script>
+
+    <!-- Favicon (icon) -->
+    <link rel="icon" type="image/x-icon" href="https://minecraft.noobtw.top/server-icon.png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Noob 生存伺服器" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://minecraft.noobtw.top/" />
+    <meta property="og:image" content="https://minecraft.noobtw.top/server-icon.png" />
+    <meta property="og:description" content="超好玩的生存伺服器，支援Java與基岩版，台灣/香港雙節點。" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="connect.html" class="active">連線教學</a>
+      <a href="rules.html">伺服器規則</a>
+      <a href="community.html">玩家社群</a>
+    </nav>
+  </header>
+  <div class="section">
+    <h2>伺服器連線資訊</h2>
+    <table class="server-table">
+      <tr>
+        <th>節點</th>
+        <th>支援平台</th>
+        <th>IP / 網域</th>
+        <th>Port (JAVA)</th>
+        <th>Port (基岩)</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>台灣</td>
+        <td>Java / 基岩</td>
+        <td>mc.noobtw.top</td>
+        <td>25565</td>
+        <td>19132</td>
+        <td>
+          <button class="copy-btn" onclick="copyIP('mc.noobtw.top')">複製IP</button>
+        </td>
+      </tr>
+      <tr>
+        <td>香港</td>
+        <td>Java / 基岩</td>
+        <td>hk.mc.noobtw.top</td>
+        <td>25565</td>
+        <td>19132</td>
+        <td>
+          <button class="copy-btn" onclick="copyIP('hk.mc.noobtw.top')">複製IP</button>
+        </td>
+      </tr>
+    </table>
+    <div class="card">
+      <b>連線步驟</b>
+      <ol>
+        <li>打開 Minecraft 遊戲</li>
+        <li>選擇「多人遊戲」→「新增伺服器」</li>
+        <li>輸入上方 IP 與對應 Port，點擊加入</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
